@@ -70,7 +70,7 @@ const server = http
     <title>Demo App</title>
   </head>
   <body>
-    <h1>Demo App</h1>
+    <h1>Demo App (staging)</h1>
     <form method="POST">
       <button type="submit" name="intent" value="decrement">-</button>
       <span>${currentCount.count}</span>
