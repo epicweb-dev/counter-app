@@ -1,0 +1,9 @@
+fuse:
+  dir: "${LITEFS_DIR}"
+
+data:
+  dir: "/data/litefs"
+
+lease:
+  type: "static"
+  candidate: true
