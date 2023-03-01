@@ -5,5 +5,10 @@ data:
   dir: "/data/litefs"
 
 lease:
-  type: "static"
+  type: "consul"
   candidate: true
+  advertise-url: "http://${HOSTNAME}.vm.${FLY_APP_NAME}.internal:20202"
+
+  consul:
+    url: "${FLY_CONSUL_URL}"
+    key: "litefs/${FLY_APP_NAME}"
