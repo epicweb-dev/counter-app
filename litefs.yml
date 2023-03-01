@@ -4,9 +4,14 @@ fuse:
 data:
   dir: "/data/litefs"
 
+proxy:
+  addr: ":${INTERNAL_PORT}"
+  target: "localhost:${PORT}"
+  db: "${DATABASE_FILENAME}"
+
 lease:
   type: "consul"
-  candidate: true
+  candidate: ${FLY_REGION == 'sjc'}
   advertise-url: "http://${HOSTNAME}.vm.${FLY_APP_NAME}.internal:20202"
 
   consul:
